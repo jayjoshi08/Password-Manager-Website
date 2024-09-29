@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;  /* Column direction to stack content vertically */
+    min-height: 100vh;
+    background-image: url('img/login11.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    width: 600px;
+    margin: 60px auto;
+    background: #060c21;
+    color: whitesmoke;
+    padding: 30px 40px;
+    max-width: 90%;
+}
+.container:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.container:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(20px);
+}
+.container:before,
+.container:after {
+    background: linear-gradient(230deg,#89ff00,#060c21,#00bcd4);
+}
+
+.container > h1 {
+    padding-top: 0px;
+    margin-top: 0px;
+    text-align: center;
+    background: linear-gradient(230deg,#fbff00,#0f81fb);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    padding: 10px;
+    margin-top: 0px;
+    font-size: 2rem;
+    text-align: center;
+    color: #fffdfd;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+.otp-form{
+    margin: 20px 0;
+    
+}
+
+.otp-form a:hover{
+    color: #00bcd4;
+}
+.otp-form p{
+    margin: 20px;
+    color: #89ff00;
+}
+.otp-group{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px;
+}
+.otp-group input{
+    color: whitesmoke;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #eee;
+    background: transparent;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    display: none;
+    margin: 0;
+}
+
+button.disabled{
+    opacity: 0.6;
+    pointer-events: none;
+    user-select: none;
+}
+.Error-shake {
+    animation: shake 0.2s ease-in-out 0s 4;
+}
+@keyframes shake {
+    0% { margin-left: 0rem; }
+    25% { margin-left: 0.5rem; }
+    75% { margin-right: -0.5rem; }
+    100% { margin-right: 0rem; }
+}
+#hide{
+    cursor: pointer;
+}
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    color: whitesmoke;
+    font-size: 1.0rem;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(203, 177, 177, 0.851);
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px;
+}
+.input-box label {
+    position: absolute;
+    left: 5px;
+    transform: translateY(20%);
+    color: rgba(228, 209, 209, 0.851);
+    border-radius: 10px;
+    pointer-events: none;
+    transition: 0.4s ease-in-out;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    pointer-events: none;
+    transform: translateY(-50%);
+    left: 20px;
+    font-size: 1.16rem;
+    color: rgba(228, 209, 209, 0.851);
+    border-radius: 10px;
+    padding: 0px;
+    transition: 0.4s ease-in-out;
+}
+.input-box input[type="text"]:focus ~ label,
+.input-box input[type="password"]:focus ~ label,
+.input-box input[type="email"]:focus ~ label,
+.input-box input[type="tel"]:focus ~ label,
+.input-box input[type="text"]:valid ~ label,
+.input-box input[type="password"]:valid ~ label,
+.input-box input[type="email"]:valid ~ label,
+.input-box input[type="tel"]:valid ~ label {
+    top: -1px;
+    color: black;
+    font-size: 0.8rem;
+    background-color: rgba(218, 216, 216, 0.851);
+    border-radius: 10px;
+    padding: 0px 8px;
+}
+
+#viaEmail{
+    margin: 20px 0px 20px 0px;
+}
+
+#verification2{
+    text-align: center;
+    background: #060c21;
+    color: whitesmoke;
+}
+#verification1{
+    text-align: center;
+}
+.register-link {
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+    color:rgb(157, 186, 239) ;
+}
+
+.input-box img{
+    color: rgb(255, 251, 251);
+    position: absolute;
+    top: 46%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    scale: 0.8;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.4s ease-in-out;
+}
+
+form button:hover {
+    background-color: #98f108;
+    color: black;
+}
+#password-form h3{
+    margin-top: 30px;
+    line-height: 10px;
+}
+#password-list {
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.password-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid rgba(203, 177, 177, 0.851);
+    border-radius: 10px;
+    background: transparent;
+}
+
+.password-item div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password-item button {
+    padding: 5px 10px;
+    background-color: #4b08b6;
+    color: #fff;
+    border: none;
+    margin: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px; 
+    transition: 0.4s ease-in-out;
+}
+
+.password-item button:hover {
+    background-color: #b0f413;
+    color: black;
+}
+
+#logout-btn {
+    position: relative;
+    margin: 15px auto;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+#logout-btn:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background: linear-gradient(to bottom, rgb(44, 144, 225), rgb(5, 29, 84));
+    max-width: 50vw;
+    margin: 10% auto;
+    padding: 20px;
+    border: none;
+    border: 2px solid rgba(203, 177, 177, 0.851);
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.9);
+}
+
+.modal-content .sc{
+    background-color: white;
+    color: black;
+    transition: 0.4s ease-in-out;
+}
+
+.modal-content .sc:hover{
+    background-color: rgb(28, 18, 96);
+    color: white;
+}
+
+.close {
+    color: #ffffff;
+    float:right;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    transform-origin: center bottom;
+    text-align: center;
+    background: linear-gradient(to right, rgb(36, 63, 99), #060c21);
+    color: whitesmoke;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 30px;
+    flex-shrink: 0;  /* Ensure the footer does not shrink */
+    margin-top: auto; /* Push footer to the bottom */
+    bottom: 0;
+    width: 100%;
+    font-size: 0.7rem;
+}
+
+.row {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 5px;
+}
+
+.col h3 {
+    margin-bottom: 10px;
+    width: fit-content;
+    position: relative;
+}
+
+.col i {
+    scale: 2.5;
+    margin-bottom: 15px;
+}
+
+.col a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.col a:hover {
+    color: rgb(166, 255, 0);
+}
+
+a i {
+    margin-top: 15px;
+}
+
+hr {
+    width: 98%;
+    border: 0;
+    border-bottom: 2px solid #ccc;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        max-width: 90%;
+    }
+    
+    footer {
+        border-top-left-radius: 0;
+        padding: 20px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .col {
+        flex-basis: 100%;
+    }
+}
